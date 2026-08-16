@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Produk — Matchacih BioPlastic</title>
+    <meta
+      name="description"
+      content="Detail produk kemasan biodegradable Matchacih BioPlastic: gambar, deskripsi, dan harga."
+    />
+
+    <!-- Google Fonts: Poppins (heading) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon_io/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#productDetail">Lewati ke konten utama</a>
+
+    <!-- ============ HEADER / NAVBAR ============ -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <a href="index.html#hero" class="brand">
+          <img
+            class="brand__mark"
+            src="favicon_io/android-chrome-512x512.png"
+            alt="Logo Matchacih BioPlastic"
+            width="40"
+            height="40"
+          />
+          <span class="brand__text"
+            >Matchacih<span class="brand__accent">BioPlastic</span></span
+          >
+        </a>
+
+        <nav class="nav" id="mainNav" aria-label="Navigasi utama">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="index.html#hero">Home</a></li>
+            <li>
+              <a class="nav__link is-active" href="index.html#katalog"
+                >Katalog</a
+              >
+            </li>
+            <li>
+              <a class="nav__link" href="panduan-pembuangan.html">Panduan</a>
+            </li>
+            <li><a class="nav__link" href="index.html#about">About Us</a></li>
+            <li><a class="nav__link" href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            class="icon-btn"
+            id="userBtn"
+            type="button"
+            data-open-user
+            aria-label="Buka menu akun"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <a
+            class="icon-btn"
+            href="checkout.html"
+            aria-label="Lihat keranjang belanja"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+            <span class="icon-btn__badge" data-cart-badge hidden>0</span>
+          </a>
+
+          <!-- <a
+            class="btn btn--primary btn--sm"
+            data-wa
+            href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+            target="_blank"
+            rel="noopener"
+            >Konsultasi Gratis</a
+          > -->
+
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-label="Buka menu navigasi"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ DETAIL PRODUK ============ -->
+      <!-- Konten diisi oleh shop.js berdasarkan ?slug= pada URL -->
+      <section class="product-detail" id="productDetail">
+        <div class="container">
+          <a class="link-back" href="index.html#katalog"
+            >← Kembali ke Katalog</a
+          >
+
+          <div class="product-detail__grid">
+            <figure class="product-detail__media">
+              <img id="pdImage" src="" alt="" />
+            </figure>
+
+            <div class="product-detail__info">
+              <span class="badge" id="pdBadge">Katalog</span>
+              <h1 class="product-detail__title" id="pdName"></h1>
+              <p class="product-detail__price" id="pdPrice"></p>
+              <p class="product-detail__moq" id="pdMoq"></p>
+              <p class="product-detail__desc" id="pdDesc"></p>
+              <ul class="tag-list" id="pdTags"></ul>
+
+              <div class="qty-selector">
+                <label for="pdQty">Jumlah Pesanan</label>
+                <div class="qty-selector__control">
+                  <button
+                    type="button"
+                    id="pdQtyMinus"
+                    aria-label="Kurangi jumlah"
+                  >
+                    −
+                  </button>
+                  <input type="number" id="pdQty" value="1" min="1" />
+                  <button
+                    type="button"
+                    id="pdQtyPlus"
+                    aria-label="Tambah jumlah"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+
+              <p class="product-detail__subtotal">
+                Subtotal: <strong id="pdSubtotal">Rp 0</strong>
+              </p>
+
+              <div class="product-detail__actions">
+                <button class="btn btn--light" id="pdAddCart" type="button">
+                  + Keranjang
+                </button>
+                <button class="btn btn--primary" id="pdCheckout" type="button">
+                  Checkout Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRODUK LAINNYA ============ -->
+      <section class="related">
+        <div class="container">
+          <h2 class="section-title" style="text-align: center">
+            Produk Lainnya
+          </h2>
+          <div class="related__grid" id="relatedGrid"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img
+              class="footer__logo"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              alt="Logo Matchacih BioPlastic"
+              width="44"
+              height="44"
+            />
+            <p class="footer__tagline">
+              Mengubah limbah kulit singkong menjadi kemasan biodegradable
+              bernilai tambah.
+            </p>
+          </div>
+
+          <nav class="footer__col" aria-label="Tautan halaman">
+            <h3 class="footer__heading">Halaman</h3>
+            <ul>
+              <li><a href="index.html#hero">Home</a></li>
+              <li><a href="index.html#katalog">Katalog</a></li>
+              <li><a href="panduan-pembuangan.html">Panduan</a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Layanan</h3>
+            <ul>
+              <li><a href="index.html#katalog">Bulk Order</a></li>
+              <li><a href="index.html#katalog">Custom Packaging</a></li>
+              <li><a href="index.html#contact">Free Sample</a></li>
+              <li><a href="index.html#contact">Konsultasi B2B</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Ikuti Kami</h3>
+            <ul class="social">
+              <li>
+                <a
+                  href="#"
+                  aria-label="Instagram Matchacih"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="LinkedIn Matchacih"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="TikTok Matchacih"
+                  target="_blank"
+                  rel="noopener"
+                  >TikTok</a
+                >
+              </li>
+              <li>
+                <a
+                  data-wa
+                  href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>
+            &copy; <span id="year">2026</span> Matchacih BioPlastic. Seluruh hak
+            cipta dilindungi.
+          </p>
+          <p>Dikembangkan untuk EWBC 2026.</p>
+        </div>
+
+        <div class="footer__wordmark" aria-hidden="true">MATCHACIH</div>
+      </div>
+    </footer>
+
+    <!-- ============ PANEL AKUN (DUMMY) ============ -->
+    <div class="user-panel" id="userPanel" aria-hidden="true">
+      <div class="user-panel__backdrop" data-close-user></div>
+      <aside
+        class="user-panel__sheet"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="userPanelTitle"
+      >
+        <button
+          class="user-panel__close"
+          type="button"
+          data-close-user
+          aria-label="Tutup menu akun"
+        >
+          ✕
+        </button>
+
+        <div class="user-profile">
+          <div
+            class="user-profile__avatar"
+            aria-hidden="true"
+            data-user-initials
+          ></div>
+          <h3
+            class="user-profile__name"
+            id="userPanelTitle"
+            data-user-name
+          ></h3>
+          <p class="user-profile__business" data-user-business></p>
+          <span class="badge user-profile__tier" data-user-tier></span>
+        </div>
+
+        <dl class="user-profile__meta">
+          <div>
+            <dt>No. WhatsApp</dt>
+            <dd data-user-phone></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd data-user-email></dd>
+          </div>
+          <div>
+            <dt>Member Sejak</dt>
+            <dd data-user-member-since></dd>
+          </div>
+        </dl>
+
+        <div class="user-points">
+          <div class="user-points__label">Poin Anda</div>
+          <div class="user-points__value">
+            <span data-user-points>0</span> <span>poin</span>
+          </div>
+          <p class="user-points__note">
+            Tukar poin dengan diskon di pemesanan berikutnya.
+          </p>
+        </div>
+
+        <button
+          class="btn btn--primary btn--block"
+          type="button"
+          data-open-referral
+        >
+          🎁 Bagikan Kode Referral
+        </button>
+      </aside>
+    </div>
+
+    <!-- ============ POP-UP BAGIKAN REFERRAL ============ -->
+    <div class="referral-modal" id="referralModal" aria-hidden="true">
+      <div class="referral-modal__backdrop" data-close-referral></div>
+      <div
+        class="referral-modal__sheet"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="referralTitle"
+      >
+        <button
+          class="referral-modal__close"
+          type="button"
+          data-close-referral
+          aria-label="Tutup"
+        >
+          ✕
+        </button>
+
+        <span class="badge referral-modal__ribbon"
+          >Berlaku Tanpa Batas Waktu</span
+        >
+
+        <div class="referral-modal__card">
+          <div class="referral-modal__card-head">Matchacih BioPlastic</div>
+          <p class="referral-modal__earn" id="referralTitle">
+            PARTNER YANG ANDA AJAK<br /><strong>DAPAT DISKON 10%</strong>
+          </p>
+          <p class="referral-modal__sub">
+            Mereka dapat voucher ongkir untuk pemesanan pertama
+          </p>
+        </div>
+
+        <p class="referral-modal__desc">
+          <strong>Ajak partner usaha Anda</strong> dan gunakan kode referral
+          unik Anda!
+        </p>
+
+        <div class="referral-modal__reward">
+          <div>
+            <span>ANDA DAPAT</span>
+            <strong>+250 <small>poin</small></strong>
+          </div>
+          <div class="referral-modal__plus">+</div>
+          <div>
+            <span>MEREKA DAPAT</span>
+            <strong>10% <small>diskon</small></strong>
+          </div>
+        </div>
+
+        <div class="referral-modal__code">
+          <span data-referral-code>MATCHA-XXXXX</span>
+          <button type="button" id="copyReferralBtn">Salin</button>
+        </div>
+
+        <a
+          class="btn btn--primary btn--block"
+          id="shareReferralBtn"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          >Bagikan via WhatsApp</a
+        >
+      </div>
+    </div>
+
+    <!-- ============ FLOATING WHATSAPP BUTTON ============ -->
+    <a
+      class="wa-float"
+      id="waFloat"
+      data-wa
+      href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+      target="_blank"
+      rel="noopener"
+      aria-label="Konsultasi gratis via WhatsApp"
+    >
+      <span class="wa-float__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path
+            d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.03c-.25.69-1.45 1.32-2 1.4-.53.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.03-1.31-5-4.36-5.16-4.57-.15-.2-1.23-1.63-1.23-3.11s.78-2.21 1.06-2.51c.27-.3.6-.38.79-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.93 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.64-.08.18-.2.74-.86.94-1.16.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.49.22.56.35.07.13.07.74-.18 1.42Z"
+          />
+        </svg>
+      </span>
+      <span class="wa-float__label">Konsultasi Gratis Sekarang</span>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>

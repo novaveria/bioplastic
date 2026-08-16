@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Matchacih BioPlastic — Kemasan Biodegradable dari Limbah Kulit Singkong
+    </title>
+    <meta
+      name="description"
+      content="Matchacih BioPlastic mengubah limbah kulit singkong menjadi kemasan biodegradable berbasis pati, kitosan, CMC, dan gliserol. Solusi sustainable packaging untuk UMKM dan korporasi."
+    />
+
+    <!-- Google Fonts: Poppins (heading) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="favicon_io/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Aksesibilitas: link lompat ke konten utama -->
+    <a class="skip-link" href="#hero">Lewati ke konten utama</a>
+
+    <!-- ============ HEADER / NAVBAR ============ -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-inner">
+        <!-- KIRI: Logo -->
+        <a href="#hero" class="brand">
+          <!-- Masukkan logo Matchacih di sini (misal: assets/logo.png). Rasio ideal 1:1 -->
+          <img
+            class="brand__mark"
+            src="favicon_io/android-chrome-512x512.png"
+            alt="Logo Matchacih BioPlastic"
+            width="40"
+            height="40"
+          />
+          <span class="brand__text"
+            >Matchacih<span class="brand__accent">BioPlastic</span></span
+          >
+        </a>
+
+        <!-- TENGAH: Navigasi -->
+        <nav class="nav" id="mainNav" aria-label="Navigasi utama">
+          <ul class="nav__list">
+            <li>
+              <a class="nav__link is-active" href="#hero" data-nav>Home</a>
+            </li>
+            <li><a class="nav__link" href="#katalog" data-nav>Katalog</a></li>
+            <li>
+              <a class="nav__link" href="panduan-pembuangan.html">Panduan</a>
+            </li>
+            <li><a class="nav__link" href="#about" data-nav>About Us</a></li>
+            <li><a class="nav__link" href="#contact" data-nav>Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- KANAN: Akun, Keranjang, CTA + tombol hamburger -->
+        <div class="header-actions">
+          <button
+            class="icon-btn"
+            id="userBtn"
+            type="button"
+            data-open-user
+            aria-label="Buka menu akun"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+
+          <a
+            class="icon-btn"
+            href="checkout.html"
+            aria-label="Lihat keranjang belanja"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path
+                d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+              ></path>
+            </svg>
+            <span class="icon-btn__badge" data-cart-badge hidden>0</span>
+          </a>
+
+          <!-- <a
+            class="btn btn--primary btn--sm"
+            data-wa
+            href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+            target="_blank"
+            rel="noopener"
+            >Konsultasi Gratis</a
+          > -->
+
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-label="Buka menu navigasi"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+            <span class="nav-toggle__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO SECTION ============ -->
+      <section class="hero" id="hero">
+        <div class="container">
+          <div class="hero__card reveal">
+            <!-- Masukkan landing_page.jpeg di sini (gambar latar hero, min. 1600x900px) -->
+            <img
+              class="hero__bg"
+              src="img/bg_Hero.jpg"
+              alt="Ladang singkong sebagai sumber bahan baku Matchacih BioPlastic"
+            />
+
+            <div class="hero__overlay"></div>
+
+            <div class="hero__content">
+              <span class="badge badge--light"
+                >♻︎ Circular Economy Packaging</span
+              >
+              <h1 class="hero__title">Plastik yang<br />Kembali ke Tanah</h1>
+              <p class="hero__subtitle">
+                Matchacih BioPlastic mengubah limbah kulit singkong menjadi
+                kemasan biodegradable berbasis pati, kitosan, CMC, dan gliserol
+                — dirancang terurai lebih menyeluruh tanpa meninggalkan residu
+                mikroplastik.
+              </p>
+              <div class="hero__actions">
+                <a class="btn btn--light" href="#katalog">Lihat Katalog</a>
+                <a
+                  class="btn btn--ghost"
+                  data-wa
+                  href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+                  target="_blank"
+                  rel="noopener"
+                  >Konsultasi Gratis →</a
+                >
+              </div>
+            </div>
+
+            <!-- Kartu mengambang ala referensi landing_page.jpeg -->
+            <!-- <div class="hero__float"> 
+              Masukkan product.jpeg di sini (thumbnail produk, rasio 1:1) 
+              <img
+                class="hero__float-img"
+                src="img/mockup_Bioplastik.png"
+                alt="Lembar Matchacih BioPlastic"
+                width="72"
+                height="72" 
+
+              <div>
+                <strong class="hero__float-title">Berbasis Riset</strong>
+                <p class="hero__float-desc">
+                  Formulasi dikembangkan bersama perguruan tinggi (R&amp;D).
+                </p>
+              </div> 
+            </div> -->
+          </div>
+
+          <!-- Strip statistik -->
+          <div class="stats reveal">
+            <div class="stat">
+              <span class="stat__num" data-count="21" data-suffix=" jt">0</span>
+              <span class="stat__label">Ton singkong/tahun di Indonesia</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="182" data-suffix=" M">0</span>
+              <span class="stat__label">Kantong plastik dipakai per tahun</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="100" data-suffix="%">0</span>
+              <span class="stat__label"
+                >Potensi biodegradasi dalam 12 hari*</span
+              >
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="4" data-suffix=" bahan"
+                >0</span
+              >
+              <span class="stat__label">Pati, kitosan, CMC, gliserol</span>
+            </div>
+          </div>  
+        </div>
+      </section>
+
+      <!-- ============ PRODUCT DETAILS (BAHAN & KETERANGAN) ============ -->
+      <section class="product" id="product">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="badge">Bahan &amp; Keterangan</span>
+            <h2 class="section-title">
+              Empat bahan, satu tujuan:<br />terurai tanpa sisa
+            </h2>
+            <p class="section-desc">
+              Setiap komponen punya peran spesifik. Kombinasinya membuat matriks
+              bioplastik lebih hidrofilik, sehingga lebih mudah diakses
+              mikroorganisme saat terurai.
+            </p>
+          </header>
+
+          <div class="product__grid reveal">
+            <!-- Kolom kiri: keunggulan ringkas -->
+            <aside class="product__side product__side--left">
+              <div class="feature">
+                <span class="feature__icon" aria-hidden="true">🌱</span>
+                <h3 class="feature__title">Waste-to-Value</h3>
+                <p class="feature__desc">
+                  Bahan baku dari limbah kulit singkong, tidak bersaing dengan
+                  kebutuhan pangan.
+                </p>
+              </div>
+              <div class="feature">
+                <span class="feature__icon" aria-hidden="true">🧪</span>
+                <h3 class="feature__title">Lolos Quality Control</h3>
+                <p class="feature__desc">
+                  Diuji ketebalan, kuat tarik, fleksibilitas, ketahanan air, dan
+                  biodegradabilitas.
+                </p>
+              </div>
+              <div class="feature">
+                <span class="feature__icon" aria-hidden="true">📦</span>
+                <h3 class="feature__title">Custom Packaging</h3>
+                <p class="feature__desc">
+                  Ukuran dan cetak logo sesuai kebutuhan usaha Anda, tersedia
+                  untuk bulk order.
+                </p>
+              </div>
+            </aside>
+
+            <!-- Kolom tengah: gambar produk + titik hotspot -->
+            <figure class="product__stage">
+              <!-- Masukkan product.jpeg di sini (foto produk, latar polos, min. 900x1200px) -->
+              <img
+                class="product__img"
+                src="img/mockup_Bioplastik.png"
+                alt="Lembar Matchacih BioPlastic dari pati kulit singkong"
+              />
+
+              <!-- Hotspot: posisi diatur lewat CSS custom property --x / --y -->
+              <button
+                class="hotspot"
+                type="button"
+                data-target="pati"
+                style="--x: 32%; --y: 22%"
+                aria-label="Sorot bahan Pati Kulit Singkong"
+              ></button>
+              <button
+                class="hotspot"
+                type="button"
+                data-target="kitosan"
+                style="--x: 66%; --y: 40%"
+                aria-label="Sorot bahan Kitosan"
+              ></button>
+              <button
+                class="hotspot"
+                type="button"
+                data-target="gliserol"
+                style="--x: 30%; --y: 63%"
+                aria-label="Sorot bahan Gliserol"
+              ></button>
+              <button
+                class="hotspot"
+                type="button"
+                data-target="cmc"
+                style="--x: 62%; --y: 80%"
+                aria-label="Sorot bahan CMC"
+              ></button>
+            </figure>
+
+            <!-- Kolom kanan: keterangan bahan -->
+            <div class="product__side product__side--right">
+              <article class="callout" id="pati" data-callout="pati">
+                <h3 class="callout__title">Pati Kulit Singkong</h3>
+                <p class="callout__desc">
+                  Matriks utama bioplastik. Diambil dari limbah pabrik
+                  pengolahan, UMKM, dan rumah tangga.
+                </p>
+              </article>
+              <article class="callout" id="kitosan" data-callout="kitosan">
+                <h3 class="callout__title">Kitosan</h3>
+                <p class="callout__desc">
+                  Meningkatkan sifat hidrofilik dan kekuatan material,
+                  mempercepat aktivitas mikroorganisme.
+                </p>
+              </article>
+              <article class="callout" id="gliserol" data-callout="gliserol">
+                <h3 class="callout__title">Gliserol (Plasticizer)</h3>
+                <p class="callout__desc">
+                  Membuat lembaran lentur dan tidak getas, sehingga aman untuk
+                  membungkus dan menahan beban.
+                </p>
+              </article>
+              <article class="callout" id="cmc" data-callout="cmc">
+                <h3 class="callout__title">CMC (Stabilizer)</h3>
+                <p class="callout__desc">
+                  Menstabilkan campuran agar ketebalan dan performa antar-batch
+                  tetap konsisten.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ KATALOG ============ -->
+      <section class="katalog" id="katalog">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="badge">Katalog</span>
+            <h2 class="section-title">
+              Pilih format kemasan<br />sesuai skala usaha
+            </h2>
+            <p class="section-desc">
+              GANTI konten berikut dengan SKU, ukuran, dan harga final Anda.
+            </p>
+          </header>
+
+          <!-- Baris 1: gambar kanan -->
+          <article class="zigzag reveal">
+            <div class="zigzag__text">
+              <span class="zigzag__index">01</span>
+              <h3 class="zigzag__title">Kantong Belanja Biodegradable</h3>
+              <p class="zigzag__desc">
+                Ukuran kecil hingga besar untuk toko kelontong, warung makan,
+                dan retail. Kuat menahan beban harian dengan warna alami
+                kecokelatan khas bahan nabati.
+              </p>
+              <ul class="tag-list">
+                <li class="tag">Food-grade</li>
+                <li class="tag">Bulk order</li>
+                <li class="tag">Garansi produk</li>
+              </ul>
+              <div class="zigzag__links">
+                <a class="link-arrow" href="product.html?slug=kantong-belanja"
+                  >Lihat detail produk</a
+                >
+                <!-- <a
+                  class="link-arrow"
+                  data-wa
+                  href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+                  target="_blank"
+                  rel="noopener"
+                  >Minta penawaran</a
+                > -->
+              </div>
+            </div>
+            <div class="zigzag__media zigzag__media--a">
+              <!-- Masukkan foto produk kantong belanja di sini (rasio 4:3) -->
+              <img
+                src="img/bioplastik.jpg"
+                alt="Kantong belanja biodegradable Matchacih"
+              />
+            </div>
+          </article>
+
+          <!-- Baris 2: gambar kiri (dibalik lewat class --reverse) -->
+          <!-- <article class="zigzag zigzag--reverse reveal">
+            <div class="zigzag__text">
+              <span class="zigzag__index">02</span>
+              <h3 class="zigzag__title">Kemasan Food-Grade</h3>
+              <p class="zigzag__desc">
+                Untuk UMKM kuliner yang butuh pembungkus aman dan tahan terhadap
+                makanan berkuah, tanpa menaikkan biaya modal secara signifikan.
+              </p>
+              <ul class="tag-list">
+                <li class="tag">Tahan air</li>
+                <li class="tag">Panduan pembuangan</li>
+                <li class="tag">Free sample</li>
+              </ul>
+              <div class="zigzag__links">
+                <a
+                  class="link-arrow"
+                  href="product.html?slug=kemasan-food-grade"
+                  >Lihat detail produk</a
+                >
+                <a
+                  class="link-arrow"
+                  data-wa
+                  href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+                  target="_blank"
+                  rel="noopener"
+                  >Minta penawaran</a
+                >
+              </div>
+            </div>
+            <div class="zigzag__media zigzag__media--b">
+              <img
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                alt="Kemasan food-grade Matchacih BioPlastic"
+              />
+            </div>
+          </article> 
+        -->
+
+          <!-- Baris 3: gambar kanan -->
+          <article class="zigzag zigzag--reverse reveal">
+            <div class="zigzag__text">
+              <span class="zigzag__index">02</span>
+              <h3 class="zigzag__title">Custom Packaging B2B</h3>
+              <p class="zigzag__desc">
+                Untuk supermarket, FMCG, packaging converter, dan restoran:
+                kontrak harga berdasarkan volume, pengiriman terjadwal, dan
+                konsultasi khusus.
+              </p>
+              <ul class="tag-list">
+                <li class="tag">Cetak logo</li>
+                <li class="tag">Kontrak harga</li>
+                <li class="tag">Dukungan ESG/CSR</li>
+              </ul>
+              <div class="zigzag__links">
+                <a
+                  class="link-arrow"
+                  href="product.html?slug=custom-packaging-b2b"
+                  >Lihat detail produk</a
+                >
+                <!-- <a
+                  class="link-arrow"
+                  data-wa
+                  href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+                  target="_blank"
+                  rel="noopener"
+                  >Minta penawaran</a
+                > -->
+              </div>
+            </div>
+            <div class="zigzag__media zigzag__media--c">
+              <!-- Masukkan foto custom packaging B2B di sini (rasio 4:3) -->
+              <img
+                src="img/bioplastik_B2B.jpg"
+                alt="Custom packaging B2B Matchacih BioPlastic"
+              />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT US ============ -->
+      <section class="about" id="about">
+        <div class="container">
+          <header class="section-head reveal">
+            <span class="badge">About Us</span>
+            <h2 class="section-title">
+              Dari limbah dapur<br />ke rantai pasok berkelanjutan
+            </h2>
+            <p class="section-desc">
+              Produksi Indonesia mencapai sekitar 21 juta ton singkong per
+              tahun, dan kulitnya sebagian besar terbuang. Kami mengumpulkannya
+              lewat Collection Hub, memprosesnya menjadi bioplastik, lalu
+              mendistribusikannya kembali ke pelaku usaha.
+            </p>
+          </header>
+
+          <ol class="steps reveal">
+            <li class="step">
+              <span class="step__num">1</span>
+              <h3 class="step__title">Pengumpulan</h3>
+              <p class="step__desc">
+                Limbah kulit singkong dari pabrik, UMKM, dan rumah tangga lewat
+                Open Supplier Partnership.
+              </p>
+            </li>
+            <li class="step">
+              <span class="step__num">2</span>
+              <h3 class="step__title">Sortir &amp; Timbang</h3>
+              <p class="step__desc">
+                Seluruh bahan masuk Collection Hub untuk ditimbang, disortir,
+                dan disimpan sementara.
+              </p>
+            </li>
+            <li class="step">
+              <span class="step__num">3</span>
+              <h3 class="step__title">Produksi &amp; QC</h3>
+              <p class="step__desc">
+                Formulasi hasil R&amp;D bersama perguruan tinggi, diuji sebelum
+                dan sesudah produksi.
+              </p>
+            </li>
+            <li class="step">
+              <span class="step__num">4</span>
+              <h3 class="step__title">Distribusi</h3>
+              <p class="step__desc">
+                Disalurkan ke UMKM dan korporasi lewat skema B2C dan B2B
+                terintegrasi.
+              </p>
+            </li>
+          </ol>
+
+          <!-- Showcase platform digital -->
+          <!-- <div class="platform reveal">
+            <div class="platform__intro">
+              <h3 class="platform__title">
+                Satu platform untuk seluruh proses pemesanan
+              </h3>
+              <p class="platform__desc">
+                Konsultasi, request quotation, custom packaging, bulk order,
+                hingga repeat order dan program referral — semuanya dalam satu
+                sistem.
+              </p>
+            </div>
+            <div class="platform__shots">
+              <figure class="shot">
+              
+                <a href="#katalog">
+                  <img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt="Tampilan halaman katalog platform Matchacih"
+                  />
+                </a>
+                <figcaption>Katalog</figcaption>
+              </figure>
+              <figure class="shot">
+                
+                <a href="checkout.html">
+                  <img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt="Tampilan halaman checkout platform Matchacih"
+                  />
+                </a>
+                <figcaption>Checkout</figcaption>
+              </figure>
+              <figure class="shot">
+             
+                <button
+                  type="button"
+                  class="shot-trigger"
+                  data-open-user
+                  aria-label="Buka menu akun"
+                >
+                  <img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt="Tampilan halaman akun pengguna"
+                  />
+                </button>
+                <figcaption>Akun</figcaption>
+              </figure>
+              <figure class="shot">
+                
+                <button
+                  type="button"
+                  class="shot-trigger"
+                  data-open-referral
+                  aria-label="Bagikan kode referral"
+                >
+                  <img
+                    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                    alt="Tampilan berbagi kode referral"
+                  />
+                </button>
+                <figcaption>Referral</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <br>
+      <br>
+      <!-- ============ CTA WHATSAPP ============ -->
+      <section class="cta-wa">
+        <div class="container cta-wa__inner reveal">
+          <div>
+            <h2 class="cta-wa__title">Belum yakin ukuran mana yang cocok?</h2>
+            <p class="cta-wa__desc">
+              Tim kami bantu hitung kebutuhan, kirim free sample, dan susun
+              penawaran tanpa biaya. Balasan rata-rata di bawah 1 jam pada jam
+              kerja.
+            </p>
+          </div>
+          <a
+            class="btn btn--light btn--lg"
+            data-wa
+            href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+            target="_blank"
+            rel="noopener"
+            >Konsultasi Gratis Sekarang</a
+          >
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section class="contact" id="contact">
+        <div class="container contact__grid">
+          <div class="contact__info reveal">
+            <span class="badge">Contact</span>
+            <h2 class="section-title">Hubungi kami</h2>
+            <p class="section-desc">
+              Isi formulir, dan pesan Anda akan langsung terkirim ke WhatsApp
+              kami dalam format yang rapi.
+            </p>
+            <ul class="contact__list">
+              <li>
+                <strong>WhatsApp</strong
+                ><span data-wa-display>+62 8XX-XXXX-XXXX</span>
+              </li>
+              <li><strong>Email</strong><span>halo@matchacih.id</span></li>
+              <li>
+                <strong>Lokasi</strong><span>Depok, Jawa Barat, Indonesia</span>
+              </li>
+              <li>
+                <strong>Jam Operasional</strong
+                ><span>Senin–Jumat, 09.00–17.00 WIB</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Form ini TIDAK mengirim ke server. Isinya dirakit jadi pesan WhatsApp oleh script.js -->
+          <form class="contact__form reveal" id="waForm" novalidate>
+            <div class="field">
+              <label for="fName">Nama</label>
+              <input
+                type="text"
+                id="fName"
+                name="nama"
+                placeholder="Nama lengkap"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="fBusiness">Nama Usaha</label>
+              <input
+                type="text"
+                id="fBusiness"
+                name="usaha"
+                placeholder="Contoh: Warteg Berkah"
+              />
+            </div>
+            <div class="field">
+              <label for="fNeed">Kebutuhan</label>
+              <select id="fNeed" name="kebutuhan">
+                <option>Kantong Belanja Biodegradable</option>
+                <option>Kemasan Food-Grade</option>
+                <option>Custom Packaging B2B</option>
+                <option>Free Sample</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="fMessage">Pesan</label>
+              <textarea
+                id="fMessage"
+                name="pesan"
+                rows="4"
+                placeholder="Perkiraan jumlah, ukuran, atau pertanyaan Anda"
+              ></textarea>
+            </div>
+            <p class="form-error" id="formError" role="alert" hidden></p>
+            <button class="btn btn--primary btn--block" type="submit">
+              Kirim via WhatsApp
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <!-- Masukkan logo versi putih di sini -->
+            <img
+              class="footer__logo"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+              alt="Logo Matchacih BioPlastic"
+              width="44"
+              height="44"
+            />
+            <p class="footer__tagline">
+              Mengubah limbah kulit singkong menjadi kemasan biodegradable
+              bernilai tambah.
+            </p>
+          </div>
+
+          <nav class="footer__col" aria-label="Tautan halaman">
+            <h3 class="footer__heading">Halaman</h3>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#katalog">Katalog</a></li>
+              <li><a href="panduan-pembuangan.html">Panduan</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Layanan</h3>
+            <ul>
+              <li><a href="#katalog">Bulk Order</a></li>
+              <li><a href="#katalog">Custom Packaging</a></li>
+              <li><a href="#contact">Free Sample</a></li>
+              <li><a href="#contact">Konsultasi B2B</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <h3 class="footer__heading">Ikuti Kami</h3>
+            <ul class="social">
+              <li>
+                <a
+                  href="#"
+                  aria-label="Instagram Matchacih"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="LinkedIn Matchacih"
+                  target="_blank"
+                  rel="noopener"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="TikTok Matchacih"
+                  target="_blank"
+                  rel="noopener"
+                  >TikTok</a
+                >
+              </li>
+              <li>
+                <a
+                  data-wa
+                  href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>
+            &copy; <span id="year">2026</span> Matchacih BioPlastic. Seluruh hak
+            cipta dilindungi.
+          </p>
+          <p>Dikembangkan untuk EWBC 2026.</p>
+        </div>
+
+        <div class="footer__wordmark" aria-hidden="true">MATCHACIH</div>
+      </div>
+    </footer>
+
+    <!-- ============ PANEL AKUN (DUMMY) ============ -->
+    <div class="user-panel" id="userPanel" aria-hidden="true">
+      <div class="user-panel__backdrop" data-close-user></div>
+      <aside
+        class="user-panel__sheet"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="userPanelTitle"
+      >
+        <button
+          class="user-panel__close"
+          type="button"
+          data-close-user
+          aria-label="Tutup menu akun"
+        >
+          ✕
+        </button>
+
+        <div class="user-profile">
+          <div
+            class="user-profile__avatar"
+            aria-hidden="true"
+            data-user-initials
+          ></div>
+          <h3
+            class="user-profile__name"
+            id="userPanelTitle"
+            data-user-name
+          ></h3>
+          <p class="user-profile__business" data-user-business></p>
+          <span class="badge user-profile__tier" data-user-tier></span>
+        </div>
+
+        <dl class="user-profile__meta">
+          <div>
+            <dt>No. WhatsApp</dt>
+            <dd data-user-phone></dd>
+          </div>
+          <div>
+            <dt>Email</dt>
+            <dd data-user-email></dd>
+          </div>
+          <div>
+            <dt>Member Sejak</dt>
+            <dd data-user-member-since></dd>
+          </div>
+        </dl>
+
+        <div class="user-points">
+          <div class="user-points__label">Poin Anda</div>
+          <div class="user-points__value">
+            <span data-user-points>0</span> <span>poin</span>
+          </div>
+          <p class="user-points__note">
+            Tukar poin dengan diskon di pemesanan berikutnya.
+          </p>
+        </div>
+
+        <button
+          class="btn btn--primary btn--block"
+          type="button"
+          data-open-referral
+        >
+          🎁 Bagikan Kode Referral
+        </button>
+      </aside>
+    </div>
+
+    <!-- ============ POP-UP BAGIKAN REFERRAL ============ -->
+    <div class="referral-modal" id="referralModal" aria-hidden="true">
+      <div class="referral-modal__backdrop" data-close-referral></div>
+      <div
+        class="referral-modal__sheet"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="referralTitle"
+      >
+        <button
+          class="referral-modal__close"
+          type="button"
+          data-close-referral
+          aria-label="Tutup"
+        >
+          ✕
+        </button>
+
+        <span class="badge referral-modal__ribbon"
+          >Berlaku Tanpa Batas Waktu</span
+        >
+
+        <div class="referral-modal__card">
+          <div class="referral-modal__card-head">Matchacih BioPlastic</div>
+          <p class="referral-modal__earn" id="referralTitle">
+            PARTNER YANG ANDA AJAK<br /><strong>DAPAT DISKON 10%</strong>
+          </p>
+          <p class="referral-modal__sub">
+            Mereka dapat voucher ongkir untuk pemesanan pertama
+          </p>
+        </div>
+
+        <p class="referral-modal__desc">
+          <strong>Ajak partner usaha Anda</strong> dan gunakan kode referral
+          unik Anda!
+        </p>
+
+        <div class="referral-modal__reward">
+          <div>
+            <span>ANDA DAPAT</span>
+            <strong>+250 <small>poin</small></strong>
+          </div>
+          <div class="referral-modal__plus">+</div>
+          <div>
+            <span>MEREKA DAPAT</span>
+            <strong>10% <small>diskon</small></strong>
+          </div>
+        </div>
+
+        <div class="referral-modal__code">
+          <span data-referral-code>MATCHA-XXXXX</span>
+          <button type="button" id="copyReferralBtn">Salin</button>
+        </div>
+
+        <a
+          class="btn btn--primary btn--block"
+          id="shareReferralBtn"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          >Bagikan via WhatsApp</a
+        >
+      </div>
+    </div>
+
+    <!-- ============ FLOATING WHATSAPP BUTTON ============ -->
+    <a
+      class="wa-float"
+      id="waFloat"
+      data-wa
+      href="https://wa.me/628XXXXXXXXXX?text=Halo%20saya%20tertarik%20dengan%20Matchacih%20BioPlastic"
+      target="_blank"
+      rel="noopener"
+      aria-label="Konsultasi gratis via WhatsApp"
+    >
+      <span class="wa-float__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path
+            d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm5.8 14.03c-.25.69-1.45 1.32-2 1.4-.53.08-1.18.11-1.9-.12-.44-.14-1-.33-1.72-.64-3.03-1.31-5-4.36-5.16-4.57-.15-.2-1.23-1.63-1.23-3.11s.78-2.21 1.06-2.51c.27-.3.6-.38.79-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.93 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.64-.08.18-.2.74-.86.94-1.16.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.3.15.49.22.56.35.07.13.07.74-.18 1.42Z"
+          />
+        </svg>
+      </span>
+      <span class="wa-float__label">Konsultasi Gratis Sekarang</span>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+  </body>
+</html>
